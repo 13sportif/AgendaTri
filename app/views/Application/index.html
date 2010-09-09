@@ -1,0 +1,37 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{if events.size() > 0}
+    <div class="events">    
+        <h3>All events from ${month} ${year} ${reqDate.format('yyyy-MM-dd')}</h3>
+    
+        #{list items:events, as:'event'}
+            <div class="event">
+                <h2 class="event-title">
+    				<a href="@{Application.show(event.slug)}">${event.title}</a>                
+                </h2>
+                <div class="event-metadata">
+                    <span class="event-date">
+                        ${event.dateEvt.format('dd MMM yyyy', 'fr')}
+                    </span>
+                    <div class="event-competitions">
+                        ${event.competitions.size() ?: 'pas de'} 
+                        competition${event.competitions.size().pluralize()}
+                        #{if event.competitions.size() > 0}
+                        	<ul>
+					        #{list items:event.competitions, as:'compet'}
+                    	        <li>${compet}.</li>
+					        #{/list}
+					        </ul>
+                        #{/if}
+                    </div>
+                </div>
+            </div>
+        #{/list}
+    </div>
+#{/if}
+#{else}
+    <div class="empty">
+        Il n'y a pas d'événements à afficher pour le moment.
+    </div>
+#{/else}

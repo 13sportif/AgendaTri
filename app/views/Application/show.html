@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+#{set title:event.title /}
+
+<div class="event">
+    <h2 class="event-title">${event.title}</h2>
+    <div class="event-metadata">
+        <span class="event-date">
+            ${event.dateEvt.format('dd MMM yyyy', 'fr')}
+        </span>
+        <div class="event-competitions">
+            ${event.competitions.size() ?: 'pas de'} 
+            competition${event.competitions.size().pluralize()}
+            #{if event.competitions.size() > 0}
+            	<ul>
+		        #{list items:event.competitions, as:'compet'}
+        	        <li>${compet}.</li>
+		        #{/list}
+		        </ul>
+            #{/if}
+        </div>
+    </div>
+    <div class="event-content">
+    	${event.description.nl2br()}
+    </div>
+</div>
