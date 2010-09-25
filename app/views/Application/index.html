@@ -1,10 +1,14 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{if events.size() > 0}
-    <div class="events">    
-        <h3>All events from ${month} ${year} ${reqDate.format('yyyy-MM-dd')}</h3>
+<div class="events">    
+    <h3> 
+    	<a href="${prevMonth.format('/yyyy/MM')}">&lt;&lt;</a> 
+    	${reqDate.format('MMMM yyyy', 'fr')} 
+    	<a href="${nextMonth.format('/yyyy/MM')}">&gt;&gt;</a>
+    </h3>  
     
+	#{if events.size() > 0}
         #{list items:events, as:'event'}
             <div class="event">
                 <h2 class="event-title">
@@ -12,7 +16,7 @@
                 </h2>
                 <div class="event-metadata">
                     <span class="event-date">
-                        ${event.dateEvt.format('dd MMM yyyy', 'fr')}
+                        ${event.dateEvt.format('d MMM yyyy', 'fr')}
                     </span>
                     <div class="event-competitions">
                         ${event.competitions.size() ?: 'pas de'} 
@@ -28,10 +32,10 @@
                 </div>
             </div>
         #{/list}
-    </div>
-#{/if}
-#{else}
-    <div class="empty">
-        Il n'y a pas d'événements à afficher pour le moment.
-    </div>
-#{/else}
+	#{/if}
+	#{else}
+	    <div class="empty">
+	        <p>Il n'y a pas d'événements à afficher pour cette période.</p>
+	    </div>
+	#{/else}
+</div>

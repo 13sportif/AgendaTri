@@ -11,10 +11,12 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-    	<div class="header">
-    		<h1><a href="@{Application.index()}">Agenda du Tri</a></h1>
+    	<div id="container">
+	    	<div id="header">
+	    		<h1><a href="@{Application.index()}">Agenda du Tri</a></h1>
+	    	</div>
+	    	<hr />
+	    	#{doLayout /}
     	</div>
-    	<hr />
-    	#{doLayout /}
     </body>
 </html>

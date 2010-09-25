@@ -56,7 +56,7 @@ public class Event extends Model {
     @PrePersist
     void putSlug() {
         this.slug = JavaExtensions.slugify(this.title) + "-"
-        	+ JavaExtensions.format(dateEvt, "dd-MM-yyyy", "fr");
+        	+ JavaExtensions.format(dateEvt, "dd-MMMM-yyyy", "fr");
     }
 
     public String toString() {
