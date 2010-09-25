@@ -2,19 +2,21 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Import CRUD routes
-*      /admin              module:crud
+# Home page
+GET     /                                       Application.index
+GET		/cal/{year}/{month}    		            Application.index
+GET		/cal/{year} 				            Application.index
+
+# Event page
+GET     /event/{slug}/{format}                  Application.show
+GET     /event/{slug}/                          Application.show
+GET     /event/{slug}                           Application.show
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
-# Event page
-GET     /event/{slug}                           Application.show
-
-# Home page
-GET		/{year}/{month}     		            Application.index
-GET		/{year} 					            Application.index
-GET     /                                       Application.index
+# Import CRUD routes
+*      /admin              module:crud
 
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}

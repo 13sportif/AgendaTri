@@ -3,6 +3,7 @@
 
 <div class="event">
     <h2 class="event-title">${event.title}</h2>
+	<div style="float: right;"><a href="@{Application.show(event.slug)}pdf">pdf</a></div>
     <div class="event-metadata">
         <span class="event-date">
             ${event.dateEvt.format('d MMM yyyy', 'fr')}

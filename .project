@@ -18,5 +18,6 @@
 	<linkedResources><link><name>crud</name><type>2</type><location>/home/julien/Dev/Play/play-1.0.3.2/modules/crud/app</location></link>
 <link><name>conf/crud</name><type>2</type><location>/home/julien/Dev/Play/play-1.0.3.2/modules/crud/conf</location></link>
 <link><name>public/crud</name><type>2</type><location>/home/julien/Dev/Play/play-1.0.3.2/modules/crud/public</location></link>
+<link><name>pdf-head</name><type>2</type><location>/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/app</location></link>
 </linkedResources>
 </projectDescription>

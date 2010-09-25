@@ -3,9 +3,9 @@
 
 <div class="events">    
     <h3> 
-    	<a href="${prevMonth.format('/yyyy/MM')}">&lt;&lt;</a> 
+    	<a href="@{Application.index()}cal/${prevMonth.format('yyyy/MM')}">&lt;&lt;</a> 
     	${reqDate.format('MMMM yyyy', 'fr')} 
-    	<a href="${nextMonth.format('/yyyy/MM')}">&gt;&gt;</a>
+    	<a href="@{Application.index()}cal/${nextMonth.format('yyyy/MM')}">&gt;&gt;</a>
     </h3>  
     
 	#{if events.size() > 0}

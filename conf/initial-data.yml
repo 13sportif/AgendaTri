@@ -2,7 +2,7 @@
 
 Event(paris):
     title:          Triathlon de Paris
-    dateEvt:        2010-08-21
+    dateEvt:        2010-09-21
     description:    >
                     Nous continuerons d’œuvrer pour un Triathlon de Paris différent. 
                     Parce que la Tour Eiffel, c’est unique !
@@ -13,7 +13,7 @@ Event(paris):
 
 Event(feins):
     title:          6e Triathlon de Feins
-    dateEvt:        2010-07-11
+    dateEvt:        2010-09-11
     description:    >
                     A l'étang du Boulet.
 
@@ -28,6 +28,12 @@ Event(betton):
     dateEvt:        2010-09-08
     description:    >
                     Sprint et Découverte.
+    
+Event(loquirec):
+    title:          Triathlon de Loquirec
+    dateEvt:        2010-10-03
+    description:    >
+                    Sprint et CD.
     
     
 Type(triathlon):
@@ -90,3 +96,8 @@ Competition(c2betton):
     type:           duathlon
     format:         decouverte
     event:          betton
+
+Competition(c1loquirec):
+    type:           triathlon
+    format:         sprint
+    event:          loquirec

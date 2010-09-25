@@ -2,9 +2,17 @@
 <classpath>
 	<classpathentry excluding="views/**" kind="src" path="app"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="src" path="crud"/>
+	<classpathentry kind="src" path="crud"/><classpathentry kind="src" path="pdf-head"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/framework/play.jar" sourcepath="/home/julien/Dev/Play/play-1.0.3.2/framework" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/play-pdf.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/xmlapi-yahp.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/core-renderer-yahp.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/yahp-internal.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/shanijar-yahp.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/itext-yahp.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/tidy-yahp.jar" />
+	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/modules/pdf-head/lib/yahp.jar" />
 	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/framework/lib/commons-httpclient.jar" />
 	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/framework/lib/mina-core-2.0.0-M2-SNAPSHOT.jar" />
 	<classpathentry kind="lib" path="/home/julien/Dev/Play/play-1.0.3.2/framework/lib/groovy-all-1.7.1.jar" />

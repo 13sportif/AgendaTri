@@ -6,6 +6,7 @@ import java.util.*;
 
 import play.mvc.*;
 import play.templates.*;
+import static play.modules.pdf.PDF.*;
 
 import models.*;
 
@@ -39,10 +40,14 @@ public class Application extends Controller {
         render(events, prevMonth, nextMonth, reqDate);
     }
     
-    public static void show(String slug) {
+    public static void show(String slug, String format) {
     	Event event = Event.find("bySlug", slug).first();
     	notFoundIfNull(event);
-        render(event);
+    	if ("pdf".equalsIgnoreCase(format)) {
+            renderPDF(event);
+		} else {
+	        render(event);			
+		}
     }
     
 }
