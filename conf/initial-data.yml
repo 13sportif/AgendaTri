@@ -1,0 +1,92 @@
+# Test data
+
+Event(paris):
+    title:          Triathlon de Paris
+    dateEvt:        2010-08-21
+    description:    >
+                    Nous continuerons d’œuvrer pour un Triathlon de Paris différent. 
+                    Parce que la Tour Eiffel, c’est unique !
+                    
+                    Mais différent aussi, 
+                    parce que tous ensemble, nous y apposerons notre marque, 
+                    celle de la F.F.TRI. et du Triathlon de Paris –Ile de France.
+
+Event(feins):
+    title:          6e Triathlon de Feins
+    dateEvt:        2010-07-11
+    description:    >
+                    A l'étang du Boulet.
+
+Event(labaule):
+    title:          Triathlon de La Baule
+    dateEvt:        2010-09-14
+    description:    >
+                    Grand Prix FFTri, CD et Découverte.
+    
+Event(betton):
+    title:          Triathlon de La Betton
+    dateEvt:        2010-09-08
+    description:    >
+                    Sprint et Découverte.
+    
+    
+Type(triathlon):
+    type:           Triathlon
+
+Type(duathlon):
+    type:           Duathlon
+
+Type(aquathlon):
+    type:           Aquathlon
+
+Format(sprint):
+    format:         Sprint
+
+Format(cd):
+    format:         Courte-Distance
+
+Format(decouverte):
+    format:         Découverte
+
+Format(avenir):
+    format:         Avenir
+
+Competition(c1paris):
+    type:           triathlon
+    format:         cd
+    event:          paris
+    
+Competition(c2paris):
+    type:           duathlon
+    format:         sprint
+    event:          paris
+    
+Competition(c3paris):
+    type:           aquathlon
+    format:         avenir
+    event:          paris
+    
+Competition(c1feins):
+    type:           triathlon
+    format:         cd
+    event:          feins
+   
+Competition(c1labaule):
+    type:           triathlon
+    format:         cd
+    event:          labaule
+    
+Competition(c2labaule):
+    type:           triathlon
+    format:         decouverte
+    event:          labaule
+   
+Competition(c1betton):
+    type:           triathlon
+    format:         sprint
+    event:          betton
+    
+Competition(c2betton):
+    type:           duathlon
+    format:         decouverte
+    event:          betton

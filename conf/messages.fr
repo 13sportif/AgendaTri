@@ -1,0 +1,19 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+title=Titre
+description=Description
+date=Date de l'événement
+email=Mail
+city=Ville
+region=Région
+dept=Numéro de département
+lat=Latitude
+lng=Longitude
+webSite=Url du site Web de l'épreuve
+contact=Contact
+submitterEmail=Mail du soumetteur
+submitterPwd=Mot de passe du soumetteur
+published=Etat publié ?
+
